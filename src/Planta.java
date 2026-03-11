@@ -6,9 +6,9 @@ public class Planta {
     private TipoLlanta tipoLlanta;
     private float pesoChasis;
     private MaterialChasis materialChasis;
-    private Colores colores;
+    private ArrayList<String> colores;
 
-    public Planta(float tamañoLlanta, TipoLlanta tipoLlanta, float pesoChasis, MaterialChasis materialChasis, Colores colores) {
+    public Planta(float tamañoLlanta, TipoLlanta tipoLlanta, float pesoChasis, MaterialChasis materialChasis, ArrayList<String> colores) {
         this.tipoLlanta = tipoLlanta;
         this.tamañoLlanta = tamañoLlanta;
         this.materialChasis = materialChasis;
@@ -16,13 +16,14 @@ public class Planta {
         this.colores = colores;
     }
 
-    public Carro fabricar() {
+    public Carro fabricar(String colorSolicitado) {
         List<Llanta> nuevasLlantas = new ArrayList<>();
         for (int i = 0; i < 4; i++) {
             nuevasLlantas.add(new Llanta(this.tamañoLlanta, this.tipoLlanta));
         }
         Chasis nuevoChasis = new Chasis(this.pesoChasis, this.materialChasis);
-        return new Carro(this.colores, nuevoChasis, nuevasLlantas);
+        String colorCarro = this.colores.contains(colorSolicitado) ? colorSolicitado : "Color no disponible";
+        return new Carro(colorCarro, nuevoChasis, nuevasLlantas);
     }
 
     public float getTamañoLlanta() {
@@ -57,11 +58,11 @@ public class Planta {
         this.materialChasis = materialChasis;
     }
 
-    public Colores getColores() {
+    public ArrayList<String> getColores() {
         return colores;
     }
 
-    public void setColores(Colores colores) {
+    public void setColores(ArrayList<String> colores) {
         this.colores = colores;
     }
 

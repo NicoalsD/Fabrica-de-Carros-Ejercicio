@@ -1,21 +1,21 @@
 import java.util.List;
 
 public class Carro {
-    private Colores color;
+    private String color;
     private Chasis chasis;
     private List<Llanta> llantas;
 
-    public Carro(Colores color, Chasis chasis, List<Llanta> llantas) {
+    public Carro(String color, Chasis chasis, List<Llanta> llantas) {
         this.color = color;
         this.chasis = chasis;
         this.llantas = llantas;
     }
 
-    public Colores getColor() {
+    public String getColor() {
         return this.color;
     }
 
-    public void setColor(Colores color) {
+    public void setColor(String color) {
         this.color = color;
     }
 
