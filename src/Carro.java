@@ -1,12 +1,14 @@
+import java.util.List;
+
 public class Carro {
     private Colores color;
     private Chasis chasis;
-    private Llanta llanta;
+    private List<Llanta> llantas;
 
-    public Carro(Colores color, Chasis chasis, Llanta llanta) {
+    public Carro(Colores color, Chasis chasis, List<Llanta> llantas) {
         this.color = color;
         this.chasis = chasis;
-        this.llanta = llanta;
+        this.llantas = llantas;
     }
 
     public Colores getColor() {
@@ -25,16 +27,16 @@ public class Carro {
         this.chasis = chasis;
     }
 
-    public Llanta getLlanta() {
-        return this.llanta;
+    public List<Llanta> getLlantas() {
+        return this.llantas;
     }
 
-    public void setLlanta(Llanta llanta) {
-        this.llanta = llanta;
+    public void setLlantas(List<Llanta> llantas) {
+        this.llantas = llantas;
     }
 
     @Override
     public String toString() {
-        return "Carro{color= "+this.color+", chasis= "+this.chasis+", llanta= "+this.llanta+"}";
+        return "Carro{color= "+this.color+", chasis= "+this.chasis+", llantas= "+this.llantas+"}";
     }
 }

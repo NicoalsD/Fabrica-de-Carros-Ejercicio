@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Planta {
     private float tamañoLlanta;
     private TipoLlanta tipoLlanta;
@@ -14,9 +17,12 @@ public class Planta {
     }
 
     public Carro fabricar() {
-        Llanta nuevaLlanta = new Llanta(this.tamañoLlanta, this.tipoLlanta);
+        List<Llanta> nuevasLlantas = new ArrayList<>();
+        for (int i = 0; i < 4; i++) {
+            nuevasLlantas.add(new Llanta(this.tamañoLlanta, this.tipoLlanta));
+        }
         Chasis nuevoChasis = new Chasis(this.pesoChasis, this.materialChasis);
-        return new Carro(this.colores, nuevoChasis, nuevaLlanta);
+        return new Carro(this.colores, nuevoChasis, nuevasLlantas);
     }
 
     public float getTamañoLlanta() {
