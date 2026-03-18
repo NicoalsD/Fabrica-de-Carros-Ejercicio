@@ -1,3 +1,5 @@
+package FabricaCarros;
+
 public class Llanta {
     private float tamaño;
     private TipoLlanta tipoLlanta;

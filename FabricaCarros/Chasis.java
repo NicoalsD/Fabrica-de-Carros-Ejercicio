@@ -1,3 +1,5 @@
+package FabricaCarros;
+
 public class Chasis {
     private float peso;
     private MaterialChasis material;
