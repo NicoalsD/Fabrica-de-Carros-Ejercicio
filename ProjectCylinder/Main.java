@@ -6,7 +6,7 @@ public class Main {
 
         System.out.println(mCircle);
 
-        Cylinder miCilindro = new Cylinder(10, 20, "Cagada");
+        Cylinder miCilindro = new Cylinder(10, 20, "Violeta");
 
         System.out.println(miCilindro);
     }
