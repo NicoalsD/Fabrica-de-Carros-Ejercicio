@@ -20,6 +20,6 @@ public class Main {
         System.out.println("// 100 CARROS DE LA PLANTA 2");
         for (int i = 1; i <= 100; i++) {
             System.out.println("Carro n" + i + " " + planta2.fabricar("ROJO"));
-        }      
+        }
     }
 }
